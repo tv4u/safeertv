@@ -769,7 +769,7 @@ class Arirang(BaseChannel):
     default_action = 'play_stream' 
 
     def action_play_stream(self):
-        self.plugin.set_stream_url('http://mta1-lh.akamaihd.net/i/Orginal_1@123040/index_300_av-b.m3u8')
+        self.plugin.set_stream_url('rtsp://ms.mta.tv:1935/live/Urdu_240p')
 
 ##############
 ## MTA URDU ##
