@@ -758,70 +758,68 @@ class UT(BaseChannel):
     def action_play_stream(self):
 	self.plugin.set_stream_url('http://stream2g01-g50.1plus1.ua/380555/smil:380555.smil/playlist.m3u8')
 
-########################
-## PAKISTANI CHANNELS ##
-########################
+##################
+## MTA ORIGINAL ##
+##################
 
-class Pakistani(BaseChannel):
-    playable = False
-    short_name = 'PK'
-    long_name = 'Pakistani Channels'
-    default_action = 'list_streams'
-    
-    def action_list_streams(self):
-        data = {}
-        data.update(self.args)
-        data.update({'action': 'play_stream', 'Title': 'MTA', 'stream_url': 'rtsp://ms.mta.tv:1935/live/Urdu_240p'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Dunya News', 'stream_url': 'rtmp://173.245.68.50/live playpath=cam swfUrl=http://dunyanews.tv/newsite/live_stream/player.swf live=1'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'DAWN NEWS', 'stream_url': 'rtsp://dawnstream.hostingmadeeasy.com/dawn'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'DEKHO TV', 'stream_url': 'http://54.243.231.64:1935/live/dekhotv.mp4/hasbahca.m3u8'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Sama News', 'stream_url': 'rtsp://38.96.148.99:1935/live/bb'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'ARY ONE WORLD', 'stream_url': 'rtmp://93.115.88.177:1935/live playpath=myStream swfUrl=http://hamariweb.com/mediaplayer-5.10-licensed/player.swf live=1'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'samatv', 'stream_url': 'rtmp://38.96.148.99:1935/samaalive playpath=samaalive swfUrl=http://hamariweb.com/mediaplayer-5.10-licensed/player.swf live=1'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'PTV NEWS', 'stream_url': 'rtmp://live.server4sale.com/live playpath=PTVnews swfUrl=http://live.server4sale.com:81/swfs/videoPlayer.swf live=1'})
-        self.plugin.add_list_item(data, is_folder=False)
-        self.plugin.end_list()
+class Arirang(BaseChannel):
+    playable = True
+    short_name = 'MTA'
+    long_name = 'MTA ORIGINAL'
+    default_action = 'play_stream' 
 
-    def action_play_stream(self):        
-        self.plugin.set_stream_url(self.args['stream_url'])
+    def action_play_stream(self):
+        self.plugin.set_stream_url('http://mta1-lh.akamaihd.net/i/Orginal_1@123040/index_300_av-b.m3u8')
 
-#####################
-## INDIAN CHANNELS ##
-#####################
+##############
+## MTA URDU ##
+##############
 
-class Indian(BaseChannel):
-    playable = False
-    short_name = 'IND'
-    long_name = 'Indian Channels'
-    default_action = 'list_streams'
-    
-    def action_list_streams(self):
-        data = {}
-        data.update(self.args)
-        data.update({'action': 'play_stream', 'Title': 'Star Plus HD', 'stream_url': 'rtsp://115.248.246.156:554/STARPLUS_QVGA.sdp'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'B4U Music', 'stream_url': 'rtsp://217.146.95.166:554/playlist/ch12zqcif.3gp'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Bollywood Movies', 'stream_url': 'rtsp://46.249.213.87/broadcast/bollywoodmovies-tablet.3gp'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Bollywood Action', 'stream_url': 'rtsp://46.249.213.87/broadcast/bollywoodaction-tablet.3gp'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Bollywood Action 2', 'stream_url': 'rtsp://46.249.213.87/broadcast/bollywoodaction2-tablet.3gp'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Channel S',  'stream_url': 'rtmp://23.21.155.146/zengalive/ playpath=mywayfilmy150.sdp swfUrl=http://www.speedauction.tv/jwplayer/player.swf live=1'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Masala TV', 'stream_url': 'rtmp://f0.d1.yatv.ru:1935/live/india-tv-new playpath=record_230853_38 swfUrl=http://yatv.ru/files/swf/player.swf swfVfy=true live=1'})
-        self.plugin.add_list_item(data, is_folder=False)
-        data.update({'action': 'play_stream', 'Title': 'Star One', 'stream_url': 'rtsp://115.248.246.156:554/STARONE_QVGA.sdp'})
-        self.plugin.add_list_item(data, is_folder=False)
-        self.plugin.end_list()
+class Arirang(BaseChannel):
+    playable = True
+    short_name = 'MTAU'
+    long_name = 'MTA URDU'
+    default_action = 'play_stream' 
 
-    def action_play_stream(self):        
-        self.plugin.set_stream_url(self.args['stream_url'])
+    def action_play_stream(self):
+        self.plugin.set_stream_url('http://mta1-lh.akamaihd.net/i/urdu_1@151347/index_1000_av-p.m3u8')
+
+#################
+## MTA ENGLISH ##
+#################
+
+class Arirang(BaseChannel):
+    playable = True
+    short_name = 'MTAE'
+    long_name = 'MTA ENGLISH'
+    default_action = 'play_stream' 
+
+    def action_play_stream(self):
+        self.plugin.set_stream_url('http://mta1-lh.akamaihd.net/i/English_1@123035/index_360_av-p.m3u8')
+
+################
+## MTA FRENCH ##
+################
+
+class Arirang(BaseChannel):
+    playable = True
+    short_name = 'MTAF'
+    long_name = 'MTA FRENCH'
+    default_action = 'play_stream' 
+
+    def action_play_stream(self):
+        self.plugin.set_stream_url('http://mta1-lh.akamaihd.net/i/French_1@123037/index_360_av-p.m3u8')
+
+#################
+## MTA BENGALI ##
+#################
+
+class Arirang(BaseChannel):
+    playable = True
+    short_name = 'MTAB'
+    long_name = 'MTA BENGALI'
+    default_action = 'play_stream' 
+
+    def action_play_stream(self):
+        self.plugin.set_stream_url('http://mta1-lh.akamaihd.net/i/Bengali_1@123038/index_750_av-p.m3u8')
+
