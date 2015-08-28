@@ -13,8 +13,6 @@
     <summary lang="en">Watch Live TV</summary>
     <description lang="en">Watch Live TV.</description>
     <disclaimer lang="en">None.</disclaimer>
-	<source>https://github.com/tv4u/safeertv.git</source>
-    <website>https://github.com/tv4u/safeertv</website>
   </extension>
 </addon>
 
